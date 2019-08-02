@@ -27,6 +27,7 @@ class EventsNew extends Component {
     }
 
     render() {
+
         const {handleSubmit, pristine, submitting} = this.props
 
         return (
@@ -36,6 +37,7 @@ class EventsNew extends Component {
 
                 <div>
                     <input type="submit" value="Submit" disabled={pristine || submitting}/>
+
                     <Link to="/">Cancel</Link>
                 </div>
             </form>

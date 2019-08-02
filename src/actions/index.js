@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export const READ_EVENTS = 'READ_EVENTS'
-export const CREATE_EVENTS = 'CREATE_EVENTS'
 export const DELETE_EVENTS = 'DELETE_EVENTS'
 
 const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1'
@@ -21,4 +20,3 @@ export const deleteEvent = id => async dispatch => {
     await axios.delete(`${ROOT_URL}/events/${id}${QUERYSTRING}`)
     dispatch({type: 'DELETE_EVENTS', id})
 };
-
