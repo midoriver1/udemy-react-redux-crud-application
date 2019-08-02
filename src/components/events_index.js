@@ -6,16 +6,19 @@ import {Link} from "react-router-dom";
 
 class EventsIndex extends Component {
     componentDidMount() {
-        console.log("hi!")
         this.props.readEvents()
     }
 
     renderEvents() {
         return _.map(this.props.events, event => (
             <tr key={event.id}>
-                <th>{event.id}</th>
-                <th>{event.title}</th>
-                <th>{event.body}</th>
+                <td>{event.id}</td>
+                <td>
+                    <Link to={`/events/${event.id}`}>
+                        {event.title}
+                    </Link>
+                </td>
+                <td>{event.body}</td>
             </tr>
         ))
     }
