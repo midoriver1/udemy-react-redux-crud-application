@@ -33,4 +33,3 @@ export const deleteEvent = id => async dispatch => {
     await axios.delete(`${ROOT_URL}/events/${id}${QUERYSTRING}`)
     dispatch({type: 'DELETE_EVENTS', id})
 };
-

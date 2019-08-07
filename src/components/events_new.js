@@ -35,6 +35,7 @@ class EventsNew extends Component {
 
                 <div>
                     <input type="submit" value="Submit" disabled={pristine || submitting || invalid}/>
+
                     <Link to="/">Cancel</Link>
                 </div>
             </form>

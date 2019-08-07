@@ -30,6 +30,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
               <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -50,6 +51,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+
         <entry file="file://$PROJECT_DIR$/src/actions/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
@@ -289,7 +291,7 @@
         <state relative-caret-position="109">
           <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
