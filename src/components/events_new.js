@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {Field} from 'redux-form'
+import {Field, reduxForm} from 'redux-form'
 import {Link} from "react-router-dom";
 import {postEvent} from "../actions";
-import {reduxForm} from "redux-form/es/immutable";
 
 class EventsNew extends Component {
     constructor(props) {
@@ -27,8 +26,7 @@ class EventsNew extends Component {
     }
 
     render() {
-
-        const {handleSubmit, pristine, submitting} = this.props
+        const {handleSubmit, pristine, submitting, invalid} = this.props
 
         return (
             <form onSubmit={handleSubmit(this.onSubmit)}>
@@ -36,7 +34,7 @@ class EventsNew extends Component {
                 <div><Field label="Body" name="body" type="text" component={this.renderField}/></div>
 
                 <div>
-                    <input type="submit" value="Submit" disabled={pristine || submitting}/>
+                    <input type="submit" value="Submit" disabled={pristine || submitting || invalid}/>
 
                     <Link to="/">Cancel</Link>
                 </div>
@@ -55,7 +53,7 @@ const validate = values => {
     return errors
 }
 
-const mapDispatchToProps = ({postEvent})
+const mapDispatchToProps = {postEvent}
 
 export default connect(null, mapDispatchToProps)(
     reduxForm({validate, form: 'eventNewForm'})(EventsNew)
