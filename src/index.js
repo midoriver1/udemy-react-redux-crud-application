@@ -13,6 +13,7 @@ import EventsIndex from './components/events_index';
 import EventsNew from './components/events_new'
 import EventsShow from './components/events_show'
 
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 
 const enhancer = process.env.NODE_ENV === 'development' ?
